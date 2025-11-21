@@ -1,111 +1,36 @@
-# GiftZoze
-## O marketplace de gift cards feito para a próxima geração.
+# 🎁 GiftZone Landing Page
+Bem-vindo ao repositório da GiftZone, uma landing page moderna e responsiva para uma loja de gift cards!
 
-O GiftZoze é uma aplicação front-end desenvolvida em React com o objetivo de simular uma plataforma moderna e responsiva para a venda e gestão de gift cards digitais.
+## Tecnologias
+<br>
 
-<strong>Foco do Projeto:</strong>
+Este projeto foi desenvolvido utilizando as seguintes tecnologias: 
 
-Experiência de Usuário (UX): Navegação fluida e design atraente.
-Gerenciamento de Estado: Uso eficiente de Hooks (como useState e useReducer ou Redux/Zustand - adicione o que você usou) para lidar com o carrinho de compras e o estado dos produtos.
-Componentização: Arquitetura limpa baseada em componentes reutilizáveis (catálogo, card de produto, modal, carrinho, etc.).
-
-Tecnologias Usadas:
+- React: Biblioteca JavaScript para construção de interfaces de usuário.
+- HTML5 & CSS3: Para a estrutura e estilização da página.
+- JavaScript (ES6+): Para lógica e interatividade.
 
 
-        <div class="overflow-x-auto">
-            <table class="min-w-full divide-y divide-gray-200">
-                <thead class="bg-gray-50">
-                    <tr>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Categoria
-                        </th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Tecnologia
-                        </th>
-                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Notas (Para Avaliação)
-                        </th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y divide-gray-200">
-                    <!-- Linha 1: Framework -->
-                    <tr class="hover:bg-indigo-50/20 transition duration-150 ease-in-out">
-                        <td class="px-6 py-4 whitespace-nowrap font-semibold text-gray-900">
-                            Framework
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-medium">
-                            React (v18+)
-                        </td>
-                        <td class="px-6 py-4 text-sm text-gray-500">
-                            Base do projeto, utilizando componentes funcionais e Hooks.
-                        </td>
-                    </tr>
-                    
-                    <!-- Linha 2: Linguagem -->
-                    <tr class="hover:bg-indigo-50/20 transition duration-150 ease-in-out">
-                        <td class="px-6 py-4 whitespace-nowrap font-semibold text-gray-900">
-                            Linguagem
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-medium">
-                            JavaScript (ES6+)
-                        </td>
-                        <td class="px-6 py-4 text-sm text-gray-500">
-                            Padrão de código moderno e assíncrono.
-                        </td>
-                    </tr>
 
-                    <!-- Linha 3: Estilização -->
-                    <tr class="hover:bg-indigo-50/20 transition duration-150 ease-in-out">
-                        <td class="px-6 py-4 whitespace-nowrap font-semibold text-gray-900">
-                            Estilização
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-medium">
-                            CSS Modules / Styled Components
-                        </td>
-                        <td class="px-6 py-4 text-sm text-gray-500">
-                            (Escolha o que você usou) Para encapsulamento e organização dos estilos por componente.
-                        </td>
-                    </tr>
+## Funcionalidades
+A landing page da GiftZone inclui:
 
-                    <!-- Linha 4: Rotas -->
-                    <tr class="hover:bg-indigo-50/20 transition duration-150 ease-in-out">
-                        <td class="px-6 py-4 whitespace-nowrap font-semibold text-gray-900">
-                            Rotas
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-medium">
-                            React Router DOM
-                        </td>
-                        <td class="px-6 py-4 text-sm text-gray-500">
-                            Para navegação entre Catálogo, Carrinho e Checkout (SPA).
-                        </td>
-                    </tr>
+- Design Responsivo: O layout se adapta a diferentes tamanhos de tela (desktop, tablet, mobile).
 
-                    <!-- Linha 5: Gestão de Estado -->
-                    <tr class="hover:bg-indigo-50/20 transition duration-150 ease-in-out">
-                        <td class="px-6 py-4 whitespace-nowrap font-semibold text-gray-900">
-                            Gestão de Estado
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-medium">
-                            Context API / Redux / Zustand
-                        </td>
-                        <td class="px-6 py-4 text-sm text-gray-500">
-                            (Escolha o que você usou) Para gerenciar o estado global (ex: itens do carrinho).
-                        </td>
-                    </tr>
+- Seção de Destaque (Hero Section): Apresentação atrativa da loja.
 
-                    <!-- Linha 6: Qualidade de Código -->
-                    <tr class="hover:bg-indigo-50/20 transition duration-150 ease-in-out">
-                        <td class="px-6 py-4 whitespace-nowrap font-semibold text-gray-900">
-                            Linter/Formatter
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-primary font-medium">
-                            ESLint / Prettier
-                        </td>
-                        <td class="px-6 py-4 text-sm text-gray-500">
-                            (Opcional, mas recomendado) Para manter a qualidade e padronização do código.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+- Visualização de Gift Cards: Exibição dos principais cartões-presente disponíveis.
+
+- Rodapé: Links úteis e informações de contato.
+
+
+👤 Autor
+- Gabriel Coutinho
+- Kaynnan
+- Ademir
+- Kauan
+- Caio
+
+GitHub: @gabrielcoutinhoDL
+
+LinkedIn: 
