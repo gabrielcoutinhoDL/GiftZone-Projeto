@@ -1,0 +1,109 @@
+.login-container{
+    width: 100%;
+    min-height: 100vh;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0;
+    color: white;
+}
+
+.card{
+    width: 400px;
+    background: #111;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+    background: #00ff6a;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 auto 15px;
+}
+
+.tabs{
+    display: flex;
+    margin-top: 15px;
+    background: #222;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabs button{
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px 0;
+    color: #bbb;
+    cursor: pointer;
+}
+
+.tab-active{
+    background: white;
+    color: black !important;
+}
+
+.form{
+    width: 400px;
+    background: #111;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.inputs{
+    position: relative;
+    margin-top: 15px;
+}
+
+.inputs input{
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: white;
+}
+
+.icon{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    opacity: 0.6;
+}
+
+.btn-verde{
+    width: 100%;
+    padding: 12px;
+    background: #00c853;
+    border: none;
+    margin-top: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+
+.btn-verde:hover{
+    background: #00b44b;
+}
+
+.termos{
+    margin-top: 15px;
+    font-size: 12px;
+    opacity: .7;
+}
+
+.termos1{
+    color: #14ff82;
+}
