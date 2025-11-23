@@ -1,4 +1,3 @@
-
 import App from "../../../App";
 import "./Categoria.css";
 import Cabecalho from "../../components/cabecalho/cabecalho";
@@ -8,11 +7,10 @@ import { Link } from "react-router-dom";
 //criação da função
 function Categoria() {
   const productIds = Object.keys(PRODUTOS);
-  
+
   return (
     <>
       <Cabecalho></Cabecalho>
-
       <section class="category-banner">
         <div class="category-info container">
           <i class="category-icon fa-solid fa-gamepad"></i>
@@ -91,7 +89,6 @@ function Categoria() {
             ))}
           </div>
         </section>
-
       </main>
     </>
   );
