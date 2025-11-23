@@ -1,0 +1,86 @@
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0 20px;
+    height: 100px;
+    position: fixed;
+}
+.zonaLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.logoTipo{
+    background: linear-gradient(to left, aquamarine, rgb(0, 153, 255));
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header h2{
+   color: aquamarine;
+}
+.pesquisaInput{
+    border: 1px solid whitesmoke;
+    width: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    background: none;
+    color: aliceblue;
+}
+.pesquisaInput::placeholder{
+    color: whitesmoke;
+}
+.opcoes li{
+    list-style: none;
+}
+.opcoes a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color:aliceblue;
+    transition: background ease 0.3s, color ease 0.3s;
+}
+.opcoes a:hover{
+    text-decoration: none;
+    color:rgb(0, 88, 146);
+    background: rgb(192, 255, 234);
+}
+.opcoes{
+    display: flex;
+    gap: 25px;
+}
+.navegacao{
+    display: flex;
+    gap: 25px
+}
+.botaoEntrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 153, 255);
+    gap: 10px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    transition: background ease 0.3s;
+    color: aliceblue;
+}
+.botaoEntrar:hover{
+    background: rgb(0, 114, 190);
+}
+

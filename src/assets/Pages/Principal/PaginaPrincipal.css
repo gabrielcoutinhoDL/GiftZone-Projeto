@@ -83,6 +83,9 @@ header h2{
 .botaoEntrar:hover{
     background: rgb(0, 114, 190);
 }
+
+
+
 .banner{
     display: flex;
     justify-content: center;
