@@ -1,0 +1,14 @@
+.box-rodape {
+    background: rgb(71, 71, 71);
+    color: rgb(231, 231, 231);
+    border-color: aliceblue;
+    justify-content: center;
+    margin-top: 60px;
+    padding: 30px;
+}
+
+.text-rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -133,7 +133,8 @@ header h2{
     border: 1px solid whitesmoke;
 
 }
-.card-grid{
+
+.cards-grid{
     display: flex;
     
 }
@@ -144,31 +145,6 @@ header h2{
     flex-direction: column;
     height: 200px;
     background: linear-gradient(grey, 0.5);
-}
-
-/* Estilos para o Catálogo de Produtos */
-.catalogo-wrapper {
-    width: 100%;
-    padding: 60px 20px;
-    color: white;
-    background: rgba(0, 0, 0, 0.3);
-}
-
-.catalogo-wrapper h1 {
-    color: whitesmoke;
-}
-.conteinerCatalogo{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
-    margin-left: 60px;
-}
-.lista-de-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .card-produto-link {
@@ -219,6 +195,4 @@ header h2{
     align-items: center;
     gap: 5px;
 }
-.estrela{
-    color: gold;
-}
+
