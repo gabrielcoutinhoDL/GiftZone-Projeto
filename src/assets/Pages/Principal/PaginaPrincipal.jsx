@@ -78,33 +78,6 @@ const PaginaPrincipal = () => {
                     </div>
                 </section>
             </section>
-<<<<<<< HEAD
-            <section>
-                <div className="catalogo-wrapper">
-                    <div className='conteinerCatalogo'>
-                        <h1>Produtos em Destaque</h1>
-                        <p>Os mais vendidos desta semana</p>
-                    </div>
-                    
-                    <div className="lista-de-cards">
-                        {productIds.map((id) => (
-                            // Cria o link para a URL dinâmica: /produto/steam ou /produto/xbox
-                            <Link 
-                                key={id} 
-                                to={`/produto/${id}`} 
-                                className="card-produto-link"
-                            >
-                                <div className="produto-item">
-                                    <img src={PRODUTOS[id].imagemUrl} alt={PRODUTOS[id].nome} />
-                                    <h3>{PRODUTOS[id].nome}</h3>
-                                    <p>Avaliação: {PRODUTOS[id].avaliacao}</p>
-                                    <span className="ver-detalhes">Clique para ver os detalhes »</span>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-=======
 
             <section>
                 <div className='textCategoria'>
@@ -145,7 +118,6 @@ const PaginaPrincipal = () => {
                         ))}
                     </div>
                 </section>
->>>>>>> e8bff25887a3881f7e46b82e2a1c758d125688cb
             </section>
         </main>
     </div>

@@ -1,0 +1,202 @@
+.layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 40px;
+}
+
+.col-esquerda {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 25px;
+}
+
+.info-compra {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    gap: 10px;
+    background-color: rgba(31, 31, 31, 0.61);
+}
+
+.info-compra input {
+    padding: 10px 12px;
+    border-radius: 10px;
+    background-color: black;
+    border: 2px solid #fff;
+}
+
+.info-compra small {
+    color: #ffffff9f;
+}
+
+
+.metodo-pagamento {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    background-color: rgba(31, 31, 31, 0.61);
+    border-radius: 10px;
+    border: 2px solid #fff;
+    gap: 5px;
+}
+
+.group-opcao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.opcao {
+    display: flex;
+    gap: 5px;
+    padding: 20px 10px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.opcao input {
+    display: none;
+}
+
+.opcao .box {
+    width: 20px;
+    height: 20px;
+    background-color: #000000;
+    border-radius: 50%;
+    border: 2px solid #01ff0d;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.opcao .box::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #01ff0d;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.2s ease;
+}
+
+.opcao input:checked + .box::after {
+    transform: scale(1);
+}
+
+.card-formulario {
+    padding: 20px;
+    background-color: #161616;
+}
+
+.card-formulario label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #cfcfcf;
+}
+
+.card-formulario input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    background: #0f0f0f;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.card-info {
+    display: flex;
+    gap: 20px;
+}
+
+.campo {
+    flex: 1;
+}
+
+.resumo {
+    flex-shrink: 0;
+    background-color: #1d1d1d;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.resumo h3 {
+    margin: 0;
+}
+
+.item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.item img {
+    width: 65px;
+    height: 65px;
+    border-radius: 8px;
+}
+
+.item .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.linha {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.total {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.valor-total {
+    color: #00d45a;
+}
+
+.finalizar {
+    background-color: #00b74a;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.finalizar:hover {
+    background-color: #009a3f;
+}
+
+.safe {
+    background-color: #caffdf;
+    color: #000;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+}
+
