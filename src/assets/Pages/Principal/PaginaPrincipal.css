@@ -74,7 +74,11 @@ header h2{
     align-items: center;
     background: rgb(0, 153, 255);
     gap: 10px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
     transition: background ease 0.3s;
+    color: aliceblue;
 }
 .botaoEntrar:hover{
     background: rgb(0, 114, 190);
@@ -98,15 +102,18 @@ header h2{
 }
 .txtBanner p{
     font-size: 20px;
+    color: whitesmoke;
 }
 .banner h1{
     font-size: 60px;
+    color: whitesmoke;
 }
 .botaoBanner{
     display: flex;
     gap: 10px;
 }
 .botaoBanner button{
+    border: none;
     padding: 15px 50px;
     border-radius: 20px;
 }
@@ -116,23 +123,25 @@ header h2{
     font-weight:700;
 }
 .explorarCate {
+    color:whitesmoke;
     border: 1px solid whitesmoke;
     transition: background ease 0.3s, border ease 0.3s;
+    background: rgb(0, 78, 75);
 }
 .explorarCate:hover {
     background: rgba(0,0,0, 0.5);
-    border: 1px solid whitesmoke;
+    color: whitesmoke;
 }
 .card-grid{
     display: flex;
     
 }
 .textCategoria{
+    color: whitesmoke;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 200px;
-    background: linear-gradient(grey, 0.5);
 
 }

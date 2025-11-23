@@ -13,7 +13,8 @@
     gap: 5px;
     min-width: 200px;
     width: 300px;
-    border: 1px solid whitesmoke;
+    color: rgb(77, 97, 95);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     height: 170px;
     background: linear-gradient(to left ,rgb(50, 50, 50), black);
     cursor:pointer;

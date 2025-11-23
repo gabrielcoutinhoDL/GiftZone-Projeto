@@ -11,6 +11,6 @@ function Cards({icone, titulo, descricao, link }){
       <p className="card-descricao">{descricao}</p>
     </article>
   )
-}
+};
 
 export default Cards
