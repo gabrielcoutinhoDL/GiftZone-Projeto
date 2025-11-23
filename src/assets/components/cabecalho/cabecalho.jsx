@@ -7,10 +7,10 @@ const cabecalho = () => {
   return (
     <header>
       <div className="zonaLogo">
-        <div className="logoTipo">
-            <a href="/"></a>
-        </div>
-        <h2>GiftZone</h2>
+        <a href="/">
+          <div className="logoTipo">G</div>
+          <h2>GiftZone</h2>
+        </a>
       </div>
 
       <form>

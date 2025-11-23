@@ -1,14 +1,16 @@
-//componente filho
 
 import App from "../../../App";
 import "./Categoria.css";
 import Cabecalho from "../../components/cabecalho/cabecalho";
+import { PRODUTOS } from "../../../data/produtosData";
+import { Link } from "react-router-dom";
 
 //criação da função
 function Categoria() {
+  const productIds = Object.keys(PRODUTOS);
+  
   return (
     <>
-      
       <Cabecalho></Cabecalho>
 
       <section class="category-banner">
@@ -60,13 +62,36 @@ function Categoria() {
           <button class="btn btn-ghost filter-clear-btn">Limpar Filtros</button>
         </aside>
 
-        <div class="empty-state">
-          <div class="empty-icon">
-            <i class="fa-solid fa-gamepad"></i>
+        <section>
+          <div className="cards-grid">
+            {productIds.map((id) => (
+              <Link
+                key={id}
+                to={`/produto/${id}`}
+                className="card-produto-link"
+              >
+                <article className="card-produto">
+                  <div
+                    className="card-produto-imagem"
+                    style={{
+                      backgroundImage: `url(${PRODUTOS[id].imagemUrl})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                  ></div>
+                  <div className="card-produto-info">
+                    <h3 className="card-produto-titulo">{PRODUTOS[id].nome}</h3>
+                    <p className="card-produto-avaliacao">
+                      <span className="estrela">⭐</span>
+                      {PRODUTOS[id].avaliacao}
+                    </p>
+                  </div>
+                </article>
+              </Link>
+            ))}
           </div>
-          <h2>Nenhum produto encontrado</h2>
-          <p>Tente ajustar seus filtros ou explore outras categorias</p>
-        </div>
+        </section>
+
       </main>
     </>
   );
