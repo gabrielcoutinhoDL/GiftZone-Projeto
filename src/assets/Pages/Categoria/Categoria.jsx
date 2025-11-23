@@ -2,35 +2,14 @@
 
 import App from "../../../App";
 import "./Categoria.css";
+import Cabecalho from "../../components/cabecalho/cabecalho";
 
 //criação da função
 function Categoria() {
   return (
     <>
-      <header className="main-header">
-        <div className="header-content container">
-          <a href="/Home" className="logo">
-            G
-          </a>
-          {/* Exemplo da logo */}
-
-          <div className="search-bar">
-            <input type="text" placeholder="Buscar gift cards..."></input>
-            <i className="fa-solid fa-search"></i>
-          </div>
-
-          <nav className="main-nav">
-            <a href="categorias">Categorias</a>
-            <a href="#">Ofertas</a>
-            <a href="#carrinho" class="cart-link">
-              <i class="fa-solid fa-shopping-cart"></i> 0
-            </a>
-            <a href="/login" className="btn btn-primary">
-              Entrar
-            </a>
-          </nav>
-        </div>
-      </header>
+      
+      <Cabecalho></Cabecalho>
 
       <section class="category-banner">
         <div class="category-info container">

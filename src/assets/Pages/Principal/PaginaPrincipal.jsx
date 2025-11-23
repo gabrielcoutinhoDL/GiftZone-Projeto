@@ -3,6 +3,7 @@ import Cards from '../../components/cards/Cards'
 import './PaginaPrincipal.css'
 import { Link } from 'react-router-dom'
 import { PRODUTOS } from '../../../data/produtosData'
+import Cabecalho from '../../components/cabecalho/cabecalho'
 const PaginaPrincipal = () => {
         const categorias = [
             {id: 1, icone: 'fa-gamepad',titulo: 'Games', descricao: '248 produtos', link: ''},
@@ -13,29 +14,7 @@ const PaginaPrincipal = () => {
         const productIds = Object.keys(PRODUTOS)
   return (
     <div>
-        <header>
-            <div className='zonaLogo'>
-                <div className='logoTipo'><h1>G</h1></div>
-                <h2>GiftZone</h2>
-            </div>
-            <form>
-                <input type="text" placeholder='Buscar Gift Cards...' className='pesquisaInput'/>
-            </form>
-            <nav className='navegacao'>
-                <ul className='opcoes'>
-                    <li><a href="">Categorias</a></li>
-                    <li><a href="">Ofertas</a></li>
-                    <li><a href="">
-                            <i className="fas fa-shopping-cart"></i>
-                        </a>
-                    </li>
-                </ul>
-                <button className='botaoEntrar' >
-                    <i className="fas fa-user fa-xs"></i>
-                    Entrar
-                </button>
-            </nav>
-        </header>
+        <Cabecalho></Cabecalho>
         <main>
             <section className='banner'>
                 <div className='txtBanner'>
@@ -78,33 +57,6 @@ const PaginaPrincipal = () => {
                     </div>
                 </section>
             </section>
-<<<<<<< HEAD
-            <section>
-                <div className="catalogo-wrapper">
-                    <div className='conteinerCatalogo'>
-                        <h1>Produtos em Destaque</h1>
-                        <p>Os mais vendidos desta semana</p>
-                    </div>
-                    
-                    <div className="lista-de-cards">
-                        {productIds.map((id) => (
-                            // Cria o link para a URL dinâmica: /produto/steam ou /produto/xbox
-                            <Link 
-                                key={id} 
-                                to={`/produto/${id}`} 
-                                className="card-produto-link"
-                            >
-                                <div className="produto-item">
-                                    <img src={PRODUTOS[id].imagemUrl} alt={PRODUTOS[id].nome} />
-                                    <h3>{PRODUTOS[id].nome}</h3>
-                                    <p>Avaliação: {PRODUTOS[id].avaliacao}</p>
-                                    <span className="ver-detalhes">Clique para ver os detalhes »</span>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-=======
 
             <section>
                 <div className='textCategoria'>
@@ -145,7 +97,7 @@ const PaginaPrincipal = () => {
                         ))}
                     </div>
                 </section>
->>>>>>> e8bff25887a3881f7e46b82e2a1c758d125688cb
+
             </section>
         </main>
     </div>

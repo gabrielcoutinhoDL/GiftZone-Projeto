@@ -77,58 +77,6 @@ a:hover {
   background: #3d82ff20;
 }
 
-/* HEADER */
-.main-header {
-  background-color: var(--color-base);
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--color-dark-border);
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-accent);
-}
-
-.search-bar {
-  display: flex;
-  align-items: center;
-  background-color: var(--color-background);
-  border-radius: var(--border-radius);
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--color-dark-border);
-  flex-grow: 1;
-  max-width: 400px;
-  margin: 0 2rem;
-}
-
-.search-bar input {
-  background: none;
-  border: none;
-  color: var(--color-text-light);
-  width: 100%;
-  padding-right: 1rem;
-  outline: none;
-}
-
-.search-bar input:focus {
-  box-shadow: 0 0 0 2px var(--color-accent);
-  border-radius: var(--border-radius);
-}
-
-.search-bar .fa-search {
-  color: var(--color-text-dim);
-}
-
-.main-nav a {
-  margin-left: 1.5rem;
-}
 
 /* BANNER */
 .category-banner {
