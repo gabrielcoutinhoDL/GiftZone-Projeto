@@ -32,13 +32,13 @@ const PaginaPrincipal = () => {
                     <button className='btnOfertas'>
                         Ver ofertas
                     </button>
-                    <button className='explorarCate'>
+                    <button className='explorarCate' onClick={() => irPara('categorias')}>
                         Explorar Categorias
                     </button>
                 </div>
             </section>
             <section>
-                <div className='textCategoria'>
+                <div className='textCategoria' id='categorias'>
                     <h1>
                         Categorias Populares
                     </h1>
@@ -62,7 +62,7 @@ const PaginaPrincipal = () => {
             </section>
 
             <section>
-                <div className='textCategoria'>
+                <div className='textCategoria' id='ofertas'>
                     <h1>
                         Catálogo de Produtos
                     </h1>

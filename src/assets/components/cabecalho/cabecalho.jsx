@@ -26,7 +26,7 @@ const cabecalho = () => {
             <a href="/categoria">Categorias</a>
           </li>
           <li>
-            <a href="">Ofertas</a>
+            <a href="#ofertas">Ofertas</a>
           </li>
           <li>
             <a href="">
