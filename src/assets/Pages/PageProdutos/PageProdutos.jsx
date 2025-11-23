@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import AnuncioCard from "../Anuncio/AnuncioCard.jsx";
+import AnuncioCard from "../../components/Anuncio/AnuncioCard.jsx";
 import { PRODUTOS } from "../../../data/produtosData.js";
 import "./PageProdutos.css";
 

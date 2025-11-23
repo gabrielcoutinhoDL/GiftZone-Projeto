@@ -1,6 +1,8 @@
 import React from 'react'
 import Cards from '../../components/cards/Cards'
 import './PaginaPrincipal.css'
+import { Link } from 'react-router-dom'
+import { PRODUTOS } from '../../../data/produtosData'
 const PaginaPrincipal = () => {
         const categorias = [
             {id: 1, icone: 'fa-gamepad',titulo: 'Games', descricao: '248 produtos', link: ''},
@@ -8,6 +10,7 @@ const PaginaPrincipal = () => {
             {id: 3, icone: 'fa-mobile-alt', titulo: 'Apps', descricao: '156 produtos', link: ''},
             {id: 4, icone: 'fa-music', titulo: 'Música', descricao: '134 produtos', link: ''}
         ]
+        const productIds = Object.keys(PRODUTOS)
   return (
     <div>
         <header>
@@ -75,6 +78,28 @@ const PaginaPrincipal = () => {
                     </div>
                 </section>
             </section>
+
+            <div className="catalogo-wrapper">
+                <h1>🎮 Catálogo de Produtos</h1>
+                
+                <div className="lista-de-cards">
+                    {productIds.map((id) => (
+                        // Cria o link para a URL dinâmica: /produto/steam ou /produto/xbox
+                        <Link 
+                            key={id} 
+                            to={`/produto/${id}`} 
+                            className="card-produto-link"
+                        >
+                            <div className="produto-item">
+                                <img src={PRODUTOS[id].imagemUrl} alt={PRODUTOS[id].nome} />
+                                <h3>{PRODUTOS[id].nome}</h3>
+                                <p>Avaliação: {PRODUTOS[id].avaliacao}</p>
+                                <span className="ver-detalhes">Clique para ver os detalhes »</span>
+                            </div>
+                        </Link>
+                    ))}
+                </div>
+            </div>
         </main>
     </div>
   )
