@@ -1,0 +1,83 @@
+import React from 'react'
+import Cards from '../../components/cards/Cards'
+import './PaginaPrincipal.css'
+const PaginaPrincipal = () => {
+        const categorias = [
+            {id: 1, icone: 'fa-gamepad',titulo: 'Games', descricao: '248 produtos', link: ''},
+            {id: 2, icone: 'fa-tv', titulo: 'Streaming', descricao: '89 produtos', link: ''},
+            {id: 3, icone: 'fa-mobile-alt', titulo: 'Apps', descricao: '156 produtos', link: ''},
+            {id: 4, icone: 'fa-music', titulo: 'Música', descricao: '134 produtos', link: ''}
+        ]
+  return (
+    <div>
+        <header>
+            <div className='zonaLogo'>
+                <div className='logoTipo'><h1>G</h1></div>
+                <h2>GiftZone</h2>
+            </div>
+            <form>
+                <input type="text" placeholder='Buscar Gift Cards...' className='pesquisaInput'/>
+            </form>
+            <nav className='navegacao'>
+                <ul className='opcoes'>
+                    <li><a href="">Categorias</a></li>
+                    <li><a href="">Ofertas</a></li>
+                    <li><a href="">
+                            <i className="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                </ul>
+                <button className='botaoEntrar' >
+                    <i className="fas fa-user fa-xs"></i>
+                    Entrar
+                </button>
+            </nav>
+        </header>
+        <main>
+            <section className='banner'>
+                <div className='txtBanner'>
+                    <h1>
+                        Seus Gift Cards Favoritos em um Só Lugar
+                    </h1>
+                    <p>
+                        Compre de forma rápida, segura e receba instantaneamente por e-mail
+                    </p>
+                </div>
+                <div className='botaoBanner'>
+                    <button className='btnOfertas'>
+                        Ver ofertas
+                    </button>
+                    <button className='explorarCate'>
+                        Explorar Categorias
+                    </button>
+                </div>
+            </section>
+            <section>
+                <div className='textCategoria'>
+                    <h1>
+                        Categorias Populares
+                    </h1>
+                    <p>
+                        Encontre o gift card perfeito para você
+                    </p>
+                </div>
+                <section>
+                    <div className="cards-grid">
+                        {categorias.map((cat) => (
+                        <Cards 
+                            key={cat.id}
+                            icone={cat.icone}
+                            titulo={cat.titulo}
+                            descricao={cat.descricao}
+                            link={cat.link}
+                        />
+                        ))}
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+  )
+}
+
+export default PaginaPrincipal
