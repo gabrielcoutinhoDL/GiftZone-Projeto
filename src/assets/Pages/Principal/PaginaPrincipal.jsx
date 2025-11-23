@@ -78,6 +78,7 @@ const PaginaPrincipal = () => {
                     </div>
                 </section>
             </section>
+<<<<<<< HEAD
             <section>
                 <div className="catalogo-wrapper">
                     <div className='conteinerCatalogo'>
@@ -103,6 +104,48 @@ const PaginaPrincipal = () => {
                         ))}
                     </div>
                 </div>
+=======
+
+            <section>
+                <div className='textCategoria'>
+                    <h1>
+                        🎮 Catálogo de Produtos
+                    </h1>
+                    <p>
+                        Escolha o gift card perfeito para você
+                    </p>
+                </div>
+                <section>
+                    <div className="cards-grid">
+                        {productIds.map((id) => (
+                            <Link 
+                                key={id} 
+                                to={`/produto/${id}`} 
+                                className="card-produto-link"
+                            >
+                                <article className="card-produto">
+                                    <div 
+                                        className="card-produto-imagem"
+                                        style={{
+                                            backgroundImage: `url(${PRODUTOS[id].imagemUrl})`,
+                                            backgroundSize: 'cover',
+                                            backgroundPosition: 'center'
+                                        }}
+                                    >
+                                    </div>
+                                    <div className="card-produto-info">
+                                        <h3 className="card-produto-titulo">{PRODUTOS[id].nome}</h3>
+                                        <p className="card-produto-avaliacao">
+                                            <span className="estrela">⭐</span>
+                                            {PRODUTOS[id].avaliacao}
+                                        </p>
+                                    </div>
+                                </article>
+                            </Link>
+                        ))}
+                    </div>
+                </section>
+>>>>>>> e8bff25887a3881f7e46b82e2a1c758d125688cb
             </section>
         </main>
     </div>
