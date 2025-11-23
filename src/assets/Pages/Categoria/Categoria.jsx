@@ -1,4 +1,3 @@
-
 import App from "../../../App";
 import "./Categoria.css";
 import Cabecalho from "../../components/cabecalho/cabecalho";
@@ -9,7 +8,7 @@ import Rodape from "../../components/rodape/rodape"
 //criação da função
 function Categoria() {
   const productIds = Object.keys(PRODUTOS);
-  
+
   return (
     <>
       <Cabecalho></Cabecalho>
@@ -92,7 +91,6 @@ function Categoria() {
             ))}
           </div>
         </section>
-
       </main>
       <footer>
         <Rodape></Rodape>
