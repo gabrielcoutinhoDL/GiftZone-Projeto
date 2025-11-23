@@ -3,8 +3,6 @@ import Cards from '../../components/cards/Cards'
 import './PaginaPrincipal.css'
 import { Link } from 'react-router-dom'
 import { PRODUTOS } from '../../../data/produtosData'
-import Cabecalho from '../../components/cabecalho/cabecalho'
-
 const PaginaPrincipal = () => {
         const categorias = [
             {id: 1, icone: 'fa-gamepad',titulo: 'Games', descricao: '248 produtos', link: ''},
@@ -15,9 +13,29 @@ const PaginaPrincipal = () => {
         const productIds = Object.keys(PRODUTOS)
   return (
     <div>
-
-        <Cabecalho></Cabecalho>
-
+        <header>
+            <div className='zonaLogo'>
+                <div className='logoTipo'><h1>G</h1></div>
+                <h2>GiftZone</h2>
+            </div>
+            <form>
+                <input type="text" placeholder='Buscar Gift Cards...' className='pesquisaInput'/>
+            </form>
+            <nav className='navegacao'>
+                <ul className='opcoes'>
+                    <li><a href="">Categorias</a></li>
+                    <li><a href="">Ofertas</a></li>
+                    <li><a href="">
+                            <i className="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                </ul>
+                <button className='botaoEntrar' >
+                    <i className="fas fa-user fa-xs"></i>
+                    Entrar
+                </button>
+            </nav>
+        </header>
         <main>
             <section className='banner'>
                 <div className='txtBanner'>
@@ -61,27 +79,46 @@ const PaginaPrincipal = () => {
                 </section>
             </section>
 
-            <div className="catalogo-wrapper">
-                <h1>🎮 Catálogo de Produtos</h1>
-                
-                <div className="lista-de-cards">
-                    {productIds.map((id) => (
-                        
-                        <Link 
-                            key={id} 
-                            to={`/produto/${id}`} 
-                            className="card-produto-link"
-                        >
-                            <div className="produto-item">
-                                <img src={PRODUTOS[id].imagemUrl} alt={PRODUTOS[id].nome} />
-                                <h3>{PRODUTOS[id].nome}</h3>
-                                <p>Avaliação: {PRODUTOS[id].avaliacao}</p>
-                                <span className="ver-detalhes">Clique para ver os detalhes »</span>
-                            </div>
-                        </Link>
-                    ))}
+            <section>
+                <div className='textCategoria'>
+                    <h1>
+                        🎮 Catálogo de Produtos
+                    </h1>
+                    <p>
+                        Escolha o gift card perfeito para você
+                    </p>
                 </div>
-            </div>
+                <section>
+                    <div className="cards-grid">
+                        {productIds.map((id) => (
+                            <Link 
+                                key={id} 
+                                to={`/produto/${id}`} 
+                                className="card-produto-link"
+                            >
+                                <article className="card-produto">
+                                    <div 
+                                        className="card-produto-imagem"
+                                        style={{
+                                            backgroundImage: `url(${PRODUTOS[id].imagemUrl})`,
+                                            backgroundSize: 'cover',
+                                            backgroundPosition: 'center'
+                                        }}
+                                    >
+                                    </div>
+                                    <div className="card-produto-info">
+                                        <h3 className="card-produto-titulo">{PRODUTOS[id].nome}</h3>
+                                        <p className="card-produto-avaliacao">
+                                            <span className="estrela">⭐</span>
+                                            {PRODUTOS[id].avaliacao}
+                                        </p>
+                                    </div>
+                                </article>
+                            </Link>
+                        ))}
+                    </div>
+                </section>
+            </section>
         </main>
     </div>
   )
