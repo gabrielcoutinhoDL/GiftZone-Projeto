@@ -1,36 +1,16 @@
-//componente filho
-
 import App from "../../../App";
 import "./Categoria.css";
+import Cabecalho from "../../components/cabecalho/cabecalho";
+import { PRODUTOS } from "../../../data/produtosData";
+import { Link } from "react-router-dom";
 
 //criação da função
 function Categoria() {
+  const productIds = Object.keys(PRODUTOS);
+
   return (
     <>
-      <header className="main-header">
-        <div className="header-content container">
-          <a href="/Home" className="logo">
-            G
-          </a>
-          {/* Exemplo da logo */}
-
-          <div className="search-bar">
-            <input type="text" placeholder="Buscar gift cards..."></input>
-            <i className="fa-solid fa-search"></i>
-          </div>
-
-          <nav className="main-nav">
-            <a href="categorias">Categorias</a>
-            <a href="#">Ofertas</a>
-            <a href="#carrinho" class="cart-link">
-              <i class="fa-solid fa-shopping-cart"></i> 0
-            </a>
-            <a href="/login" className="btn btn-primary">
-              Entrar
-            </a>
-          </nav>
-        </div>
-      </header>
+      <Cabecalho></Cabecalho>
 
       <section class="category-banner">
         <div class="category-info container">
@@ -81,13 +61,35 @@ function Categoria() {
           <button class="btn btn-ghost filter-clear-btn">Limpar Filtros</button>
         </aside>
 
-        <div class="empty-state">
-          <div class="empty-icon">
-            <i class="fa-solid fa-gamepad"></i>
+        <section>
+          <div className="cards-grid">
+            {productIds.map((id) => (
+              <Link
+                key={id}
+                to={`/produto/${id}`}
+                className="card-produto-link"
+              >
+                <article className="card-produto">
+                  <div
+                    className="card-produto-imagem"
+                    style={{
+                      backgroundImage: `url(${PRODUTOS[id].imagemUrl})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                  ></div>
+                  <div className="card-produto-info">
+                    <h3 className="card-produto-titulo">{PRODUTOS[id].nome}</h3>
+                    <p className="card-produto-avaliacao">
+                      <span className="estrela">⭐</span>
+                      {PRODUTOS[id].avaliacao}
+                    </p>
+                  </div>
+                </article>
+              </Link>
+            ))}
           </div>
-          <h2>Nenhum produto encontrado</h2>
-          <p>Tente ajustar seus filtros ou explore outras categorias</p>
-        </div>
+        </section>
       </main>
     </>
   );
