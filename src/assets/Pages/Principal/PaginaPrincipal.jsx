@@ -4,6 +4,9 @@ import './PaginaPrincipal.css'
 import { Link } from 'react-router-dom'
 import { PRODUTOS } from '../../../data/produtosData'
 import Cabecalho from '../../components/cabecalho/cabecalho'
+import Rodape from '../../components/rodape/rodape'
+import { MdOutlineStarPurple500 } from "react-icons/md";
+
 const PaginaPrincipal = () => {
         const categorias = [
             {id: 1, icone: 'fa-gamepad',titulo: 'Games', descricao: '248 produtos', link: ''},
@@ -61,10 +64,10 @@ const PaginaPrincipal = () => {
             <section>
                 <div className='textCategoria'>
                     <h1>
-                        🎮 Catálogo de Produtos
+                        Gift Cards em Destaque
                     </h1>
                     <p>
-                        Escolha o gift card perfeito para você
+                        Os mais vendidos desta semana
                     </p>
                 </div>
                 <section>
@@ -88,7 +91,7 @@ const PaginaPrincipal = () => {
                                     <div className="card-produto-info">
                                         <h3 className="card-produto-titulo">{PRODUTOS[id].nome}</h3>
                                         <p className="card-produto-avaliacao">
-                                            <span className="estrela">⭐</span>
+                                            <MdOutlineStarPurple500 size={20} />
                                             {PRODUTOS[id].avaliacao}
                                         </p>
                                     </div>
@@ -98,8 +101,14 @@ const PaginaPrincipal = () => {
                     </div>
                 </section>
             </section>
+
+        <footer>
+                <Rodape></Rodape>
+        </footer>
         </main>
+        
     </div>
+    
   )
 }
 
