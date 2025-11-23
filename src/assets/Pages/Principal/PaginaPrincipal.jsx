@@ -78,8 +78,7 @@ const PaginaPrincipal = () => {
                     </div>
                 </section>
             </section>
-<<<<<<< HEAD
-            <section>
+            
                 <div className="catalogo-wrapper">
                     <div className='conteinerCatalogo'>
                         <h1>Produtos em Destaque</h1>
@@ -104,8 +103,6 @@ const PaginaPrincipal = () => {
                         ))}
                     </div>
                 </div>
-=======
-
             <section>
                 <div className='textCategoria'>
                     <h1>
@@ -145,7 +142,6 @@ const PaginaPrincipal = () => {
                         ))}
                     </div>
                 </section>
->>>>>>> e8bff25887a3881f7e46b82e2a1c758d125688cb
             </section>
         </main>
     </div>
