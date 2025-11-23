@@ -78,28 +78,32 @@ const PaginaPrincipal = () => {
                     </div>
                 </section>
             </section>
-
-            <div className="catalogo-wrapper">
-                <h1>🎮 Catálogo de Produtos</h1>
-                
-                <div className="lista-de-cards">
-                    {productIds.map((id) => (
-                        // Cria o link para a URL dinâmica: /produto/steam ou /produto/xbox
-                        <Link 
-                            key={id} 
-                            to={`/produto/${id}`} 
-                            className="card-produto-link"
-                        >
-                            <div className="produto-item">
-                                <img src={PRODUTOS[id].imagemUrl} alt={PRODUTOS[id].nome} />
-                                <h3>{PRODUTOS[id].nome}</h3>
-                                <p>Avaliação: {PRODUTOS[id].avaliacao}</p>
-                                <span className="ver-detalhes">Clique para ver os detalhes »</span>
-                            </div>
-                        </Link>
-                    ))}
+            <section>
+                <div className="catalogo-wrapper">
+                    <div className='conteinerCatalogo'>
+                        <h1>Produtos em Destaque</h1>
+                        <p>Os mais vendidos desta semana</p>
+                    </div>
+                    
+                    <div className="lista-de-cards">
+                        {productIds.map((id) => (
+                            // Cria o link para a URL dinâmica: /produto/steam ou /produto/xbox
+                            <Link 
+                                key={id} 
+                                to={`/produto/${id}`} 
+                                className="card-produto-link"
+                            >
+                                <div className="produto-item">
+                                    <img src={PRODUTOS[id].imagemUrl} alt={PRODUTOS[id].nome} />
+                                    <h3>{PRODUTOS[id].nome}</h3>
+                                    <p>Avaliação: {PRODUTOS[id].avaliacao}</p>
+                                    <span className="ver-detalhes">Clique para ver os detalhes »</span>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
                 </div>
-            </div>
+            </section>
         </main>
     </div>
   )

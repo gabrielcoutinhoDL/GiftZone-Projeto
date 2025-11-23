@@ -37,6 +37,7 @@ header h2{
     border-radius: 10px;
     background: none;
     color: aliceblue;
+    outline: none;
 }
 .pesquisaInput::placeholder{
     color: whitesmoke;
@@ -58,7 +59,7 @@ header h2{
 .opcoes a:hover{
     text-decoration: none;
     color:rgb(0, 88, 146);
-    background: rgb(192, 255, 234);
+    background: rgb(192, 255, 234,0.3);
 }
 .opcoes{
     display: flex;
@@ -121,6 +122,10 @@ header h2{
     background: white;
     color: rgb(26, 126, 92);
     font-weight:700;
+    transition: box-shadow ease 0.3s;
+}
+.btnOfertas:hover{
+    box-shadow: 0 0 5px whitesmoke;
 }
 .explorarCate {
     color:whitesmoke;
@@ -155,12 +160,14 @@ header h2{
 }
 
 .catalogo-wrapper h1 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.5em;
-    color: aquamarine;
+    color: whitesmoke;
 }
-
+.conteinerCatalogo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    margin-left: 60px;
+}
 .lista-de-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

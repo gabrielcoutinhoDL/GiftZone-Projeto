@@ -5,7 +5,7 @@
   justify-content: center;
 }
 
-.card {
+.card{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,8 +16,7 @@
     color: rgb(77, 97, 95);
     border: 1px solid rgba(255, 255, 255, 0.3);
     height: 170px;
-    background: linear-gradient(to left ,rgb(50, 50, 50), black);
-    cursor:pointer;
+    background: linear-gradient(to left ,rgb(41, 58, 54), black);
     transition: transform ease 0.3s, border ease 0.3s;
 }
 .card:hover{
