@@ -6,10 +6,10 @@ import { PRODUTOS } from '../../../data/produtosData'
 import Cabecalho from '../../components/cabecalho/cabecalho'
 const PaginaPrincipal = () => {
         const categorias = [
-            {id: 1, icone: 'fa-gamepad',titulo: 'Games', descricao: '248 produtos', link: ''},
-            {id: 2, icone: 'fa-tv', titulo: 'Streaming', descricao: '89 produtos', link: ''},
-            {id: 3, icone: 'fa-mobile-alt', titulo: 'Apps', descricao: '156 produtos', link: ''},
-            {id: 4, icone: 'fa-music', titulo: 'Música', descricao: '134 produtos', link: ''}
+            {id: 1, icone: 'fa-gamepad',titulo: 'Games', descricao: '248 produtos', link: '/categoria'},
+            {id: 2, icone: 'fa-tv', titulo: 'Streaming', descricao: '89 produtos', link: '/categoria'},
+            {id: 3, icone: 'fa-mobile-alt', titulo: 'Apps', descricao: '156 produtos', link: '/categoria'},
+            {id: 4, icone: 'fa-music', titulo: 'Música', descricao: '134 produtos', link: '/categoria'}
         ]
         const productIds = Object.keys(PRODUTOS)
   return (
@@ -61,7 +61,7 @@ const PaginaPrincipal = () => {
             <section>
                 <div className='textCategoria'>
                     <h1>
-                        🎮 Catálogo de Produtos
+                        Catálogo de Produtos
                     </h1>
                     <p>
                         Escolha o gift card perfeito para você
