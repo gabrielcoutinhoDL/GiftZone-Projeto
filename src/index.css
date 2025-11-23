@@ -1,5 +1,11 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root{
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --accent: #3b82f6;
+  --text: #111827;
 }
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter, system-ui, Arial, sans-serif}
+html,body,#root{height:100%}
+body{background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}

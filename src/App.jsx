@@ -1,15 +1,18 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Anuncio from "./assets/Pages/anuncio/anuncio";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Login from "./assets/Pages/Login/Login.jsx";
+import PageProdutos from "./assets/Pages/PageProdutos/PageProdutos.jsx";
+import "./App.css";
 
-
-export default function App() {
+const App = () => {
   return (
-    <BrowserRouter>
+    <div className="app-root">
       <Routes>
-        <Route path="/anuncio" element={<Anuncio />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/produto/:id" element={<PageProdutos />} />
       </Routes>
-    </BrowserRouter>
+    </div>
   );
-}
+};
+
+export default App;
