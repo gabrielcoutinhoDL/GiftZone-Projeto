@@ -89,9 +89,9 @@ a:hover {
     rgb(0, 153, 255),
     rgb(0, 74, 148)
   );
-  height: 290px;
+  height: 300px;
   gap: 50px;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .category-info {
@@ -114,7 +114,7 @@ a:hover {
 }
 
 .category-info p {
-  color: var(--color-text-dim);
+  color: #fff;
 }
 
 /* LAYOUT */

@@ -11,6 +11,7 @@ function Categoria() {
   return (
     <>
       <Cabecalho></Cabecalho>
+
       <section class="category-banner">
         <div class="category-info container">
           <i class="category-icon fa-solid fa-gamepad"></i>
