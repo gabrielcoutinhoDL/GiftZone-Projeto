@@ -97,7 +97,6 @@ const PaginaPrincipal = () => {
                         ))}
                     </div>
                 </section>
-
             </section>
         </main>
     </div>
