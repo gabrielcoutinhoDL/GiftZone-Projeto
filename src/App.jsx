@@ -1,17 +1,18 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Anuncio from "./assets/Pages/anuncio/anuncio";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Login from "./assets/Pages/Login/Login.jsx";
 import PaginaPrincipal from "./assets/Pages/Principal/PaginaPrincipal.jsx";
 
-
-export default function App() {
+const App = () => {
   return (
-    <BrowserRouter>
+    <div className="app-root">
       <Routes>
         <Route path="/anuncio" element={<Anuncio />} />
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<PaginaPrincipal/>}/>
       </Routes>
-    </BrowserRouter>
+    </div>
   );
-}
+};
+
+export default App;
