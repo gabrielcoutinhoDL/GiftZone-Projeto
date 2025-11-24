@@ -1,1 +1,288 @@
 
+body {
+    background-color: #121212;
+    color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container-anuncio {
+    /* Centraliza o conteúdo e define uma largura máxima */
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 120px 20px 40px 20px; /* padding-top para compensar o cabeçalho fixo */
+}
+
+
+.bloco-principal {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 40px; 
+}
+
+
+.img {
+    flex: 0 0 40%; 
+    height: 450px;
+    background-color: rgb(41, 58, 54);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img h1 {
+    display: none; /* Esconde o h1 quando há imagem de fundo */
+}
+
+.tag-produto {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    content: "Games";
+    background: linear-gradient(to left, aquamarine, rgb(0, 153, 255));
+    color: whitesmoke;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    z-index: 10;
+}
+
+
+.detalhes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 10px;
+}
+
+.detalhes h2 {
+    font-size: 2.2em;
+    margin: 0;
+    color: whitesmoke;
+}
+
+.detalhes p {
+    color: whitesmoke;
+    margin-top: -15px;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.estrela {
+    color: aquamarine;
+    font-size: 1.1em;
+}
+
+.valoresTitulo h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.1em;
+    color: whitesmoke;
+}
+
+.valoresBtn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.valoresBtn button {
+    background: rgb(41, 58, 54);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: whitesmoke;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.valoresBtn button:hover {
+    background: rgba(41, 58, 54, 0.8);
+    border-color: aquamarine;
+    box-shadow: 0 0 10px aquamarine;
+}
+
+.valoresBtn button[data-selecionado="true"] {
+    background: linear-gradient(to left, aquamarine, rgb(0, 153, 255));
+    border-color: aquamarine;
+    color: whitesmoke;
+    box-shadow: 0 0 15px aquamarine;
+}
+
+/* 3. Bloco de Compra (Valor Total e Botões) */
+.valorTotal {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); 
+    padding-top: 20px;
+}
+
+.box-valorTotal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 12px;
+    background-color: rgb(41, 58, 54);
+    border: 1px solid aquamarine;
+    padding: 10px 15px;
+}
+
+.box-valorTotal h4 {
+    font-size: 1em;
+    font-weight: normal;
+    color: aquamarine;
+    margin: 0;
+}
+
+.box-valorTotal h1 {
+    font-size: 1.8em;
+    margin: 0;
+    color: whitesmoke;
+}
+
+.buttonsCompra {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttonsCompra button {
+    width: 100%;
+    padding: 12px 20px;
+    font-weight: bold;
+    border: 1px solid transparent;
+}
+
+.btn-comprar {
+    background: rgb(0, 153, 255);
+    color: whitesmoke;
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-comprar:hover {
+    background: rgb(0, 114, 190);
+    box-shadow: 0 0 10px rgb(0, 153, 255);
+}
+
+.btn-carrinho {
+    background: rgb(41, 58, 54);
+    color: whitesmoke;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s;
+}
+
+.btn-carrinho:hover {
+    border-color: aquamarine;
+    box-shadow: 0 0 10px aquamarine;
+}
+
+.lista-vantagens {
+    background: rgb(41, 58, 54);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.lista-vantagens ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 20px;
+    margin: 0;
+}
+
+.lista-vantagens li {
+    color: whitesmoke;
+    font-size: 0.9em;
+    text-align: center;
+    flex: 1;
+}
+
+.informacao {
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 20px;
+}
+
+.informacao .abas {
+    margin-bottom: 20px;
+}
+
+.informacao button {
+    background: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: whitesmoke;
+    border-bottom: 2px solid transparent;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.informacao button:hover {
+    color: aquamarine;
+}
+
+.informacao button[data-ativa="true"] {
+    color: aquamarine !important; /* Prioridade para a aba ativa */
+    border-bottom: 2px solid aquamarine !important;
+    font-weight: bold;
+}
+
+.Centralizar-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.Centralizar-icon svg {
+  color: aquamarine;
+  transition: color 0.3s;
+}
+
+.Centralizar-icon:hover svg {
+  color: rgb(0, 153, 255);
+}
+
+.Centralizar-icon span {
+  color: whitesmoke;
+  font-size: 0.9em;
+}
+
+.card {
+    background: rgb(41, 58, 54);
+    padding: 20px;
+    border-radius: 12px;
+    color: whitesmoke;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card h3 {
+    color: whitesmoke;
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
