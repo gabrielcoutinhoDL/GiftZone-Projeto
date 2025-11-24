@@ -1,32 +1,31 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
 
-.login-container{
+.login-container {
     width: 100%;
     min-height: 100vh;
-    background: black;
+    background-image: linear-gradient(to top, aquamarine, rgb(0, 153, 255), rgb(0, 74, 148));
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 25px 20px;
-    color: white;
+    color: whitesmoke;
 }
 
 .header-top {
     text-align: center;
     margin-bottom: 25px;
-    
 }
 
-.logo{
+.logo {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #00ff6a, #00c853);
+    background: linear-gradient(to left, aquamarine, rgb(0, 153, 255));
     border-radius: 12px;
     display: flex;
     justify-content: center;
@@ -40,10 +39,12 @@
 .header-top h1 {
     font-size: 26px;
     margin-bottom: 5px;
+    color: whitesmoke;
 }
 
 .header-top p {
-    color: #888;
+    color: whitesmoke;
+    opacity: 0.8;
     font-size: 14px;
 }
 
@@ -53,36 +54,36 @@
     margin-bottom: 20px;
 }
 
-.tabs{
+.tabs {
     display: flex;
-    background: #1a1a1a;
-    border: 1px solid #333;
+    background: #222;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 4px;
     border-radius: 8px;
 }
 
-.tabs button{
+.tabs button {
     flex: 1;
     border: none;
     background: transparent;
     padding: 10px 0;
-    color: #888;
+    color: rgba(255, 255, 255, 0.6);
     cursor: pointer;
     font-weight: 600;
     border-radius: 6px;
     transition: 0.3s;
 }
 
-.tab-active{
-    background: white !important;
+.tab-active {
+    background: whitesmoke !important;
     color: black !important;
 }
 
 .form-box {
     width: 100%;
     max-width: 400px;
-    background: #000;
-    border: 1px solid #333;
+    background: #222;
+    border: 1px solid aquamarine;
     padding: 25px;
     border-radius: 12px;
 }
@@ -90,45 +91,48 @@
 .form-header-text h2 {
     font-size: 20px;
     margin-bottom: 5px;
+    color: whitesmoke;
 }
 .form-header-text p {
-    color: #888;
+    color: whitesmoke;
+    opacity: 0.8;
     font-size: 14px;
     margin-bottom: 10px;
 }
 
-.inputs{
+.inputs {
     position: relative;
     margin-top: 15px;
 }
 
-.inputs input{
+.inputs input {
     width: 100%;
     padding: 12px 12px 12px 45px;
-    background: #111;
-    border: 1px solid #333;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
-    color: white;
+    color: whitesmoke;
     outline: none;
+    transition: 0.4s;
 }
 
 .inputs input:focus {
-    border-color: #00ff6a;
+    border-color: aquamarine;
 }
 
-.icon{
+.icon {
     position: absolute;
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
-    opacity: 0.6;
-    color: #aaa;
+    opacity: 0.8;
+    color: whitesmoke;
 }
 
-.btn-verde{
+.btn-verde {
     width: 100%;
     padding: 12px;
-    background: #00c853;
+    background: rgb(0, 153, 255);
     border: none;
     margin-top: 25px;
     border-radius: 8px;
@@ -138,19 +142,23 @@
     color: white;
 }
 
-.btn-verde:hover{
-    background: #00b44b;
+.btn-verde:hover {
+    background: rgb(0, 114, 190);
 }
 
-.termos{
+.termos {
     margin-top: 20px;
     font-size: 12px;
     text-align: center;
-    color: #666;
+    color: whitesmoke;
+    opacity: 0.7;
     line-height: 1.4;
 }
 
-.termos1{
-    color: #14ff82;
+.termos1 {
+    color: rgb(0, 204, 136);
     cursor: pointer;
+}
+.termos1:hover {
+    text-decoration: underline;
 }
