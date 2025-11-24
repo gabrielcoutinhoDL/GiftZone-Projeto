@@ -1,9 +1,18 @@
 import React from 'react'
 import './pagamento.css'
+import Cabecalho from '../../components/cabecalho/cabecalho'
+import Rodape from '../../components/rodape/rodape'
+
 
 const pagamento = () => {
   return (
     <>
+
+    <header>
+      <Cabecalho></Cabecalho>
+    </header>
+
+
     <div className='layout'>
 
         <div className='col-esquerda'>
@@ -100,6 +109,10 @@ const pagamento = () => {
         </div>
 
     </div>
+
+    <footer>
+      <Rodape></Rodape>
+    </footer>
     </>
 
     )
