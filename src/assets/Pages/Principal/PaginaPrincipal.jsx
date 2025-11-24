@@ -15,6 +15,7 @@ const PaginaPrincipal = () => {
             {id: 4, icone: 'fa-music', titulo: 'Música', descricao: '134 produtos', link: '/categoria'}
         ]
         const productIds = Object.keys(PRODUTOS)
+    
   return (
     <div>
         <Cabecalho></Cabecalho>
@@ -30,7 +31,7 @@ const PaginaPrincipal = () => {
                 </div>
                 <div className='botaoBanner'>
                     <button className='btnOfertas'>
-                        Ver ofertas
+                        <a href="#ofertas">Ver ofertas</a>
                     </button>
                     <button className='explorarCate' onClick={() => irPara('categorias')}>
                         Explorar Categorias

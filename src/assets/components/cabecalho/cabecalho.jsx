@@ -22,7 +22,7 @@ const Cabecalho = () => {
   return (
     <header>
       <div className="zonaLogo">
-        <a href="/">
+        <a href="/principal">
           <div className="logoTipo">G</div>
           <h2>GiftZone</h2>
         </a>
