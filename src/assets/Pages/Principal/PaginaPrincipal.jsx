@@ -4,14 +4,18 @@ import './PaginaPrincipal.css'
 import { Link } from 'react-router-dom'
 import { PRODUTOS } from '../../../data/produtosData'
 import Cabecalho from '../../components/cabecalho/cabecalho'
+import Rodape from '../../components/rodape/rodape'
+import { MdOutlineStarPurple500 } from "react-icons/md";
+
 const PaginaPrincipal = () => {
         const categorias = [
-            {id: 1, icone: 'fa-gamepad',titulo: 'Games', descricao: '248 produtos', link: ''},
-            {id: 2, icone: 'fa-tv', titulo: 'Streaming', descricao: '89 produtos', link: ''},
-            {id: 3, icone: 'fa-mobile-alt', titulo: 'Apps', descricao: '156 produtos', link: ''},
-            {id: 4, icone: 'fa-music', titulo: 'Música', descricao: '134 produtos', link: ''}
+            {id: 1, icone: 'fa-gamepad',titulo: 'Games', descricao: '248 produtos', link: '/categoria'},
+            {id: 2, icone: 'fa-tv', titulo: 'Streaming', descricao: '89 produtos', link: '/categoria'},
+            {id: 3, icone: 'fa-mobile-alt', titulo: 'Apps', descricao: '156 produtos', link: '/categoria'},
+            {id: 4, icone: 'fa-music', titulo: 'Música', descricao: '134 produtos', link: '/categoria'}
         ]
         const productIds = Object.keys(PRODUTOS)
+    
   return (
     <div>
         <Cabecalho></Cabecalho>
@@ -27,15 +31,15 @@ const PaginaPrincipal = () => {
                 </div>
                 <div className='botaoBanner'>
                     <button className='btnOfertas'>
-                        Ver ofertas
+                        <a href="#ofertas">Ver ofertas</a>
                     </button>
-                    <button className='explorarCate'>
+                    <button className='explorarCate' onClick={() => irPara('categorias')}>
                         Explorar Categorias
                     </button>
                 </div>
             </section>
             <section>
-                <div className='textCategoria'>
+                <div className='textCategoria' id='categorias'>
                     <h1>
                         Categorias Populares
                     </h1>
@@ -59,12 +63,12 @@ const PaginaPrincipal = () => {
             </section>
 
             <section>
-                <div className='textCategoria'>
+                <div className='textCategoria' id='ofertas'>
                     <h1>
-                        🎮 Catálogo de Produtos
+                        Catálogo de Produtos
                     </h1>
                     <p>
-                        Escolha o gift card perfeito para você
+                        Os mais vendidos desta semana
                     </p>
                 </div>
                 <section>
@@ -88,7 +92,7 @@ const PaginaPrincipal = () => {
                                     <div className="card-produto-info">
                                         <h3 className="card-produto-titulo">{PRODUTOS[id].nome}</h3>
                                         <p className="card-produto-avaliacao">
-                                            <span className="estrela">⭐</span>
+                                            <MdOutlineStarPurple500 size={22} />
                                             {PRODUTOS[id].avaliacao}
                                         </p>
                                     </div>
@@ -98,8 +102,14 @@ const PaginaPrincipal = () => {
                     </div>
                 </section>
             </section>
+
         </main>
+        
+        <footer>
+                <Rodape></Rodape>
+        </footer>
     </div>
+    
   )
 }
 

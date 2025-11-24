@@ -3,6 +3,7 @@ import "./Categoria.css";
 import Cabecalho from "../../components/cabecalho/cabecalho";
 import { PRODUTOS } from "../../../data/produtosData";
 import { Link } from "react-router-dom";
+import Rodape from "../../components/rodape/rodape"
 
 //criação da função
 function Categoria() {
@@ -91,6 +92,9 @@ function Categoria() {
           </div>
         </section>
       </main>
+      <footer>
+        <Rodape></Rodape>
+      </footer>
     </>
   );
 }
