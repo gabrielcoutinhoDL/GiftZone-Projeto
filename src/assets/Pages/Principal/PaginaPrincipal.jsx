@@ -91,7 +91,7 @@ const PaginaPrincipal = () => {
                                     <div className="card-produto-info">
                                         <h3 className="card-produto-titulo">{PRODUTOS[id].nome}</h3>
                                         <p className="card-produto-avaliacao">
-                                            <MdOutlineStarPurple500 size={20} />
+                                            <MdOutlineStarPurple500 size={22} />
                                             {PRODUTOS[id].avaliacao}
                                         </p>
                                     </div>

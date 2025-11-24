@@ -11,8 +11,7 @@ const AnuncioCard = () => {
   if (!produto) {
     return (
       <div className="erro-container">
-        <h1>❌ Produto Não Encontrado!</h1>
-        <p>O ID "{id}" não corresponde a um produto existente.</p>
+        <h1>Produto não encontrado!</h1>
       </div>
     );
   }

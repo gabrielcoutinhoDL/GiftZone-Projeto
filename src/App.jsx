@@ -14,15 +14,7 @@ const App = () => {
         <Route path="/" element={<PaginaPrincipal/>}/>
         <Route path="/produto/:id" element={<AnuncioCard/>} />
         <Route path="/categoria" element={<Categoria/>} />
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        <Route path="/pagamento" element={<Pagamento/>} />
-=======
         <Route path="/pagamentos" element={<Pagamento/>} />
->>>>>>> Stashed changes
-=======
-        <Route path="/pagamentos" element={<Pagamento/>} />
->>>>>>> Stashed changes
       </Routes>
     </div>
   );

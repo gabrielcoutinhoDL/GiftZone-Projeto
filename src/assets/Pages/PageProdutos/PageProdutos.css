@@ -8,12 +8,10 @@ body {
 }
 
 .container-anuncio {
-    /* Centraliza o conteúdo e define uma largura máxima */
     max-width: 1200px;
     margin: 0 auto; 
-    padding: 120px 20px 40px 20px; /* padding-top para compensar o cabeçalho fixo */
+    padding: 120px 20px 40px 20px; 
 }
-
 
 .bloco-principal {
     display: flex;
@@ -39,7 +37,7 @@ body {
 }
 
 .img h1 {
-    display: none; /* Esconde o h1 quando há imagem de fundo */
+    display: none; 
 }
 
 .tag-produto {
