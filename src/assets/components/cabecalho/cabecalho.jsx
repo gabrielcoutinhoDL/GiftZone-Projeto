@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./cabecalho.css";
-import Categoria from "../../Pages/Categoria/Categoria";
 import PaginaPrincipal from "../../Pages/Principal/PaginaPrincipal";
 
-const cabecalho = () => {
+const Cabecalho = () => { 
+  const [nomeUsuario, setNomeUsuario] = useState(""); 
+
+  useEffect(() => {
+    const dadosStorage = localStorage.getItem("Datacadastro"); 
+    if (dadosStorage) {
+      try {
+        const dados = JSON.parse(dadosStorage);
+        if (dados.nome) {
+          const primeiroNome = dados.nome.split(' ')[0];
+          setNomeUsuario(primeiroNome);
+        }
+      } catch (error) {
+        console.error("Erro ao ler dados do usuário:", error);
+      }
+    }
+  }, []);
   return (
     <header>
       <div className="zonaLogo">
@@ -34,13 +49,12 @@ const cabecalho = () => {
             </a>
           </li>
         </ul>
-        <button className="botaoEntrar">
-          <i className="fas fa-user fa-xs"></i>
-          Entrar
-        </button>
+        <p className="usuario">
+          <i className="fas fa-user fa-xs"> {nomeUsuario}</i>
+        </p>
       </nav>
     </header>
   );
 };
 
-export default cabecalho;
+export default Cabecalho;

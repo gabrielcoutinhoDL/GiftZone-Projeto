@@ -1,109 +1,164 @@
-.login-container{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.login-container {
     width: 100%;
     min-height: 100vh;
-    background: black;
+    background-image: linear-gradient(to top, aquamarine, rgb(0, 153, 255), rgb(0, 74, 148));
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px 0;
-    color: white;
+    justify-content: center;
+    padding: 25px 20px;
+    color: whitesmoke;
 }
 
-.card{
-    width: 400px;
-    background: #111;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 12px;
+.header-top {
     text-align: center;
+    margin-bottom: 25px;
 }
 
-.logo{
-    width: 60px;
-    height: 60px;
-    background: #00ff6a;
-    border-radius: 10px;
+.logo {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to left, aquamarine, rgb(0, 153, 255));
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: bold;
+    color: black;
     margin: 0 auto 15px;
 }
 
-.tabs{
-    display: flex;
-    margin-top: 15px;
-    background: #222;
-    border-radius: 8px;
-    overflow: hidden;
+.header-top h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+    color: whitesmoke;
 }
 
-.tabs button{
+.header-top p {
+    color: whitesmoke;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+.tabs-area {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.tabs {
+    display: flex;
+    background: #222;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.tabs button {
     flex: 1;
     border: none;
     background: transparent;
     padding: 10px 0;
-    color: #bbb;
+    color: rgba(255, 255, 255, 0.6);
     cursor: pointer;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: 0.3s;
 }
 
-.tab-active{
-    background: white;
+.tab-active {
+    background: whitesmoke !important;
     color: black !important;
 }
 
-.form{
-    width: 400px;
-    background: #111;
-    padding: 20px;
+.form-box {
+    width: 100%;
+    max-width: 400px;
+    background: #222;
+    border: 1px solid aquamarine;
+    padding: 25px;
     border-radius: 12px;
 }
 
-.inputs{
+.form-header-text h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: whitesmoke;
+}
+.form-header-text p {
+    color: whitesmoke;
+    opacity: 0.8;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.inputs {
     position: relative;
     margin-top: 15px;
 }
 
-.inputs input{
+.inputs input {
     width: 100%;
-    padding: 12px 12px 12px 40px;
-    background: #222;
-    border: 1px solid #333;
+    padding: 12px 12px 12px 45px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
-    color: white;
+    color: whitesmoke;
+    outline: none;
+    transition: 0.4s;
 }
 
-.icon{
+.inputs input:focus {
+    border-color: aquamarine;
+}
+
+.icon {
     position: absolute;
     top: 50%;
-    left: 12px;
+    left: 15px;
     transform: translateY(-50%);
-    opacity: 0.6;
+    opacity: 0.8;
+    color: whitesmoke;
 }
 
-.btn-verde{
+.btn-verde {
     width: 100%;
     padding: 12px;
-    background: #00c853;
+    background: rgb(0, 153, 255);
     border: none;
-    margin-top: 20px;
+    margin-top: 25px;
     border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: bold;
     color: white;
 }
 
-.btn-verde:hover{
-    background: #00b44b;
+.btn-verde:hover {
+    background: rgb(0, 114, 190);
 }
 
-.termos{
-    margin-top: 15px;
+.termos {
+    margin-top: 20px;
     font-size: 12px;
-    opacity: .7;
+    text-align: center;
+    color: whitesmoke;
+    opacity: 0.7;
+    line-height: 1.4;
 }
 
-.termos1{
-    color: #14ff82;
+.termos1 {
+    color: rgb(0, 204, 136);
+    cursor: pointer;
+}
+.termos1:hover {
+    text-decoration: underline;
 }
