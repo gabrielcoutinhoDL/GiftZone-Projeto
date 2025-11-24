@@ -5,6 +5,7 @@ import "./PageProdutos.css";
 import Cabecalho from "../../components/cabecalho/cabecalho";
 import Rodape from "../../components/rodape/rodape";
 import { Link } from 'react-router-dom'
+import { MdOutlineStarPurple500 } from "react-icons/md";
 
 
 const PageProdutos = ({ produto }) => {
@@ -54,7 +55,7 @@ const PageProdutos = ({ produto }) => {
           <div className="detalhes">
             <h2>{nome}</h2>
             <p>
-              <span className="estrela">⭐</span>
+              <MdOutlineStarPurple500 size={22} />
               {avaliacao}
             </p>
 
