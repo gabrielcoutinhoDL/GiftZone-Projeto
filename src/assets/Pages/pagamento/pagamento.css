@@ -4,6 +4,7 @@
     align-items: flex-start;
     gap: 40px;
     margin: 40px;
+    padding-top: 120px; 
 }
 
 .col-esquerda {

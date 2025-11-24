@@ -26,3 +26,4 @@ const AnuncioCard = () => {
 
 export default AnuncioCard;
 
+
