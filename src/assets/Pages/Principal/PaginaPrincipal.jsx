@@ -103,11 +103,11 @@ const PaginaPrincipal = () => {
                 </section>
             </section>
 
+        </main>
+        
         <footer>
                 <Rodape></Rodape>
         </footer>
-        </main>
-        
     </div>
     
   )
