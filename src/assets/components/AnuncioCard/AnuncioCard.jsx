@@ -8,16 +8,9 @@ const AnuncioCard = () => {
   const { id } = useParams();
   const produto = PRODUTOS[id];
 
-  if (!produto) {
-    return (
-      <div className="erro-container">
-        <h1>Produto não encontrado!</h1>
-      </div>
-    );
-  }
 
   return (
-    <div className="page-produtos-wrapper">
+    <div>
       <PageProdutos produto={produto} />
     </div>
   );

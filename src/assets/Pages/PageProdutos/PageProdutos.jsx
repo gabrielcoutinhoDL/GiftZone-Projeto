@@ -9,6 +9,7 @@ import { MdOutlineStarPurple500 } from "react-icons/md";
 
 
 const PageProdutos = ({ produto }) => {
+  
   if (!produto) {
     return (
       <div className="container-anuncio">
@@ -28,6 +29,7 @@ const PageProdutos = ({ produto }) => {
   const [valorSelecionado, setValorSelecionado] = useState(
     valoresDisponiveis && valoresDisponiveis.length ? valoresDisponiveis[0] : ""
   );
+
   const [abaAtiva, setAbaAtiva] = useState("descricao");
 
   const getConteudoAba = () => conteudosAbas?.[abaAtiva] ?? "";
