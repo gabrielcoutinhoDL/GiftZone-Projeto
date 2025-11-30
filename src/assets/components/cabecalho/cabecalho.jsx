@@ -22,8 +22,15 @@ const Cabecalho = () => {
   return (
     <header>
       <div className="zonaLogo">
+
         <a href="/principal">
+        </a>
           <div className="logoTipo">G</div>
+        <a href="/">
+          <div className="logoTipo">
+            <img src="images/GZ-GiftZone_Logo.png" alt="img" />
+            </div>
+
           <h2>GiftZone</h2>
         </a>
       </div>

@@ -71,11 +71,33 @@ const Login = () => {
   };
 
   return (
+
     <div className='login-container'>
         <div className='header-top'>
             <div className='logo'>G</div>
             <h1>Bem-vindo ao GiftZone</h1>
+        </div>
             <p>Entre ou crie sua conta para continuar</p>
+      <div className="card">
+        {/* adicionar logo depois */}
+        <div className="logo">
+          <img src="/GZ-GiftZone_Logo" alt="" />
+        </div>
+    /</div>
+        <div className="tabs">
+          <button
+            className={modo === "login" ? "tab-active" : ""}
+            onClick={() => setModo("login")}
+          >
+            Login
+          </button>
+
+          <button
+            className={modo === "cadastro" ? "tab-active" : ""}
+            onClick={() => setModo("cadastro")}
+          >
+            Cadastro
+          </button>
         </div>
 
         <div className="tabs-area">
