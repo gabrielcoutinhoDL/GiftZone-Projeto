@@ -8,6 +8,8 @@ import Rodape from '../../components/rodape/rodape'
 import { MdOutlineStarPurple500 } from "react-icons/md";
 
 
+
+
 const PaginaPrincipal = () => {
         const navigate = useNavigate();
         const categorias = [

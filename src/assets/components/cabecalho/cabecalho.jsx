@@ -21,12 +21,14 @@ const Cabecalho = () => {
   }, []);
   return (
     <header>
+      <a href="/principal">
       <div className="zonaLogo">
           <div className="logoTipo">
             <img src="images/GZ-minimalist_Logo.png" alt="img" />
           </div>
           <h2>GiftZone</h2>
       </div>
+      </a>
 
       <form>
         <input
