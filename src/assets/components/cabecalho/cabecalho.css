@@ -16,18 +16,18 @@ header{
     z-index: 1000;
 }
 .zonaLogo{
-    justify-content: space-between;
-}
-
-.zonaLogo a{
     display: flex;
     align-items: center;
-    text-decoration: none;
-    gap: 10px;
-    color: inherit;
+    justify-content: center;
+}
+.zonaLogo h2{
+    margin-top: 10px;
+    display: block;
 }
 .logoTipo{
-    background: linear-gradient(to left, aquamarine, rgb(0, 153, 255));
+    background: rgba(0, 30, 55, 0.2);
+    backdrop-filter:blur(15px);
+    border: 1px solid white;
     width: 50px;
     height: 50px;
     border-radius: 20px;
@@ -37,9 +37,10 @@ header{
 }
 .logoTipo img {
     width: 50px;
+    border-radius: 15px;
 }
 header h2{
-   color: aquamarine;
+   color: rgb(255, 255, 255);
 }
 .pesquisaInput{
     border: 1px solid whitesmoke;
@@ -84,14 +85,14 @@ header h2{
     justify-content: center;
     align-items: center;
     background: rgb(0, 153, 255);
-    gap: 10px;
+    gap: 20px;
     width: 100px;
     border: none;
     border-radius: 10px;
     transition: background ease 0.3s;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 .usuario:hover{
-    background: rgb(0, 114, 190);
+    background: rgb(70, 181, 255);
 }
 
