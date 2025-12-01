@@ -4,11 +4,36 @@ import Cabecalho from "../../components/cabecalho/cabecalho";
 import { PRODUTOS } from "../../../data/produtosData";
 import { Link } from "react-router-dom";
 import Rodape from "../../components/rodape/rodape"
+import { useState } from "react";
 
-//criação da função
+//cria função
 function Categoria() {
-  const productIds = Object.keys(PRODUTOS);
+  const [categoriaSelecionada, setCategoriaSelecionada] = useState('Todos');
+  
+  const categorias = [
+    { id: 'Todos', nome: 'Todos' },
+    { id: 'Games', nome: 'Games' },
+    { id: 'Streaming', nome: 'Streaming' },
+    { id: 'Apps', nome: 'Apps' },
+    { id: 'Música', nome: 'Música' }
+  ];
 
+  // Mapeamento de produtos para categorias (baseado no tipo de produto)
+  const produtoCategorias = {
+    steam: 'Games',
+    xbox: 'Games',
+    netflix: 'Streaming',
+    nuvem: 'Apps'
+  };
+
+  const productIds = Object.keys(PRODUTOS);
+  
+  // Filtrar produtos baseado na categoria selecionada
+  const produtosFiltrados = categoriaSelecionada === 'Todos' 
+    ? productIds 
+    : productIds.filter(id => produtoCategorias[id] === categoriaSelecionada);
+
+  
   return (
     <>
       <Cabecalho></Cabecalho>
@@ -59,38 +84,61 @@ function Categoria() {
             </div>
           </div>
 
-          <button class="btn btn-ghost filter-clear-btn">Limpar Filtros</button>
+          <button class="btn btn-ghost filtro-limpeza-btn">Limpar Filtros</button>
         </aside>
 
+        {/* Botões de categoria */}
         <section>
-          <div className="cards-grid">
-            {productIds.map((id) => (
-              <Link
-                key={id}
-                to={`/produto/${id}`}
-                className="card-produto-link"
+          <div className="categoria-botoes">
+            {categorias.map((categoria) => (
+              <button
+                key={categoria.id}
+                className={`categoria-botao ${categoriaSelecionada === categoria.id ? 'ativo' : ''}`}
+                onClick={() => setCategoriaSelecionada(categoria.id)}
               >
-                <article className="card-produto">
-                  <div
-                    className="card-produto-imagem"
-                    style={{
-                      backgroundImage: `url(${PRODUTOS[id].imagemUrl})`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                    }}
-                  ></div>
-                  <div className="card-produto-info">
-                    <h3 className="card-produto-titulo">{PRODUTOS[id].nome}</h3>
-                    <p className="card-produto-avaliacao">
-                      <span className="estrela">⭐</span>
-                      {PRODUTOS[id].avaliacao}
-                    </p>
-                  </div>
-                </article>
-              </Link>
+                {categoria.nome}
+              </button>
             ))}
           </div>
+          {produtosFiltrados.length > 0 ? (
+            <div className="cards-grid">
+              {produtosFiltrados.map((id) => (
+                <Link
+                  key={id}
+                  to={`/produto/${id}`}
+                  className="card-produto-link"
+                >
+                  <article className="card-produto">
+                    <div
+                      className="card-produto-imagem"
+                      style={{
+                        backgroundImage: `url(${PRODUTOS[id].imagemUrl})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                      }}
+                    ></div>
+                    <div className="card-produto-info">
+                      <h3 className="card-produto-titulo">{PRODUTOS[id].nome}</h3>
+                      <p className="card-produto-avaliacao">
+                        <span className="estrela">⭐</span>
+                        {PRODUTOS[id].avaliacao}
+                      </p>
+                    </div>
+                  </article>
+                </Link>
+              ))}
+            </div>
+          ) : (
+            <div className="no-products-wrapper">
+              <div className="empty-state">
+                <div className="empty-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <h2>Nenhum produto encontrado</h2>
+                <p>Não há produtos disponíveis nesta categoria no momento.</p>
+              </div>
+            </div>
+          )}
         </section>
+
       </main>
       <footer>
         <Rodape></Rodape>

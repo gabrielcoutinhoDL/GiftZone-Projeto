@@ -1,7 +1,7 @@
 import React from 'react'
 import Cards from '../../components/cards/Cards'
 import './PaginaPrincipal.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { PRODUTOS } from '../../../data/produtosData'
 import Cabecalho from '../../components/cabecalho/cabecalho'
 import Rodape from '../../components/rodape/rodape'
@@ -9,6 +9,7 @@ import { MdOutlineStarPurple500 } from "react-icons/md";
 
 
 const PaginaPrincipal = () => {
+        const navigate = useNavigate();
         const categorias = [
             {id: 1, icone: 'fa-gamepad',titulo: 'Games', descricao: '248 produtos', link: '/categoria'},
             {id: 2, icone: 'fa-tv', titulo: 'Streaming', descricao: '89 produtos', link: '/categoria'},
@@ -34,7 +35,7 @@ const PaginaPrincipal = () => {
                     <button className='btnOfertas'>
                         Ver ofertas
                     </button>
-                    <button className='explorarCate' onClick={() => irPara('categorias')}>
+                    <button className='explorarCate' onClick={() => navigate('/categoria')}>
                         Explorar Categorias
                     </button>
                 </div>
