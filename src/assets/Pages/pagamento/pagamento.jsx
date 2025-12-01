@@ -140,6 +140,10 @@ const Pagamento = () => {
               <strong>Compra 100% Segura</strong>
               <small>Seus dados estão protegidos</small>
             </div>
+
+            <div>
+              <button className="btn-comprar">Finalizar Compra!</button>
+            </div>
           </div>
         </div>
       </div>
