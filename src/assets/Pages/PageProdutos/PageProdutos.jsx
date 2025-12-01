@@ -88,7 +88,10 @@ const PageProdutos = ({ produto }) => {
                   <FaShoppingCart size={18} /> Adicionar ao Carrinho
                 </button>
 
-                <Link to="/pagamento">
+                {/* Enviar os dados do valor selecionado pra pagamento */}
+                <Link to="/pagamento" 
+                      state={{produto, valorSelecionado, imagemUrl}}
+                >
                     <button className="btn-comprar">Comprar Agora</button>
                 </Link>
                 

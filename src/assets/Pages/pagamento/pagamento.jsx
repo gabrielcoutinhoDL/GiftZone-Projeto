@@ -2,9 +2,15 @@ import React from 'react'
 import './pagamento.css'
 import Cabecalho from '../../components/cabecalho/cabecalho'
 import Rodape from '../../components/rodape/rodape'
+import { useLocation } from 'react-router-dom'
 
 
 const pagamento = () => {
+    
+
+    const location = useLocation();
+    const { produto, valorSelecionado } = location.state || {};
+
   return (
     <>
 
@@ -77,10 +83,12 @@ const pagamento = () => {
                 <h3>Resumo do Pedido</h3>
 
                 <div class="item">
-                    <img src="https://via.placeholder.com/60" alt="Produto" />
+                    
+                    <img src={produto.imagemUrl}/>
+
                     <div class="info">
-                        <h4>Steam Gift Card</h4>
-                        <span class="preco">R$ 50</span>
+                        <h4>{produto.nome}</h4>
+                        <span class="preco">{valorSelecionado}</span>
                         <small>Qtd: 1</small>
                     </div>
                 </div>
@@ -89,12 +97,12 @@ const pagamento = () => {
 
                 <div class="linha">
                     <span>Subtotal</span>
-                    <span>R$ 50.00</span>
+                    <span>{valorSelecionado}</span>
                 </div>
 
                 <div class="linha total">
                     <span>Total</span>
-                    <span class="valor-total">R$ 50.00</span>
+                    <span class="valor-total">{valorSelecionado}</span>
                 </div>
 
                 <button class="finalizar">
