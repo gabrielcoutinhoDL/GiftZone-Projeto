@@ -85,7 +85,7 @@ header h2{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(to top, aquamarine, rgb(0, 153, 255), rgb(0, 74, 148));
+    background: linear-gradient(to top, aquamarine, rgb(0, 153, 255), rgb(0, 20, 148));
     height: 550px;
     gap: 50px;
 }.txtBanner{
@@ -124,7 +124,7 @@ header h2{
 .explorarCate {
     border: 1px solid whitesmoke;
     transition: background ease 0.3s, border ease 0.3s;
-    background: rgb(0, 213, 255,0.3);
+    background: rgba(0, 43, 51, 0.3);
     color: whitesmoke;
     font-weight: 600;
 }
@@ -166,7 +166,7 @@ header h2{
 }
 .card-produto:hover{
     transform: translateY(-10px);
-    box-shadow: 0 0 15px aquamarine;
+    box-shadow: 0 0 15px rgb(127, 223, 255);
     border: 1px solid aquamarine;
 }
 .card-produto-imagem{

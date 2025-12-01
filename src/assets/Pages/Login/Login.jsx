@@ -71,9 +71,12 @@ const Login = () => {
   };
 
   return (
+
     <div className='login-container'>
         <div className='header-top'>
-            <div className='logo'>G</div>
+            <div className='logo'>
+              <img src="images/GZ-GiftZone_Logo.jpg" alt="" />
+            </div>
             <h1>Bem-vindo ao GiftZone</h1>
             <p>Entre ou crie sua conta para continuar</p>
         </div>

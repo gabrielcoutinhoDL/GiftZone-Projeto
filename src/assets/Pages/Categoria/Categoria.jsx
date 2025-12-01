@@ -40,9 +40,9 @@ function Categoria() {
 
       <section class="category-banner">
         <div class="category-info container">
-          <i class="category-icon fa-solid fa-gamepad"></i>
+          <i class="category-icon fa-solid fa-icons"></i>
           <div>
-            <h1>Games</h1>
+            <h1>Categorias</h1>
             <p>Gift cards para as suas plataformas de jogos favoritas.</p>
           </div>
         </div>

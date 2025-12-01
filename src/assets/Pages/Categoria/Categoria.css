@@ -127,7 +127,7 @@ a:hover {
 .filter-panel {
   background: #0c0e1a; /* mais profundo e menos acinzentado */
   border: 1px solid #1a1c2a; /* borda suave para destaque */
-  width: 290px;
+  width: 300px;
   padding: 2rem;
   border-radius: 18px;
   box-shadow: 0 0 20px #00000040;

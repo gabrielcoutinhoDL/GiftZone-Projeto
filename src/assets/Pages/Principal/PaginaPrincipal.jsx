@@ -7,6 +7,9 @@ import Cabecalho from '../../components/cabecalho/cabecalho'
 import Rodape from '../../components/rodape/rodape'
 import { MdOutlineStarPurple500 } from "react-icons/md";
 
+
+
+
 const PaginaPrincipal = () => {
         const navigate = useNavigate();
         const categorias = [
@@ -32,7 +35,7 @@ const PaginaPrincipal = () => {
                 </div>
                 <div className='botaoBanner'>
                     <button className='btnOfertas'>
-                        <a href="#ofertas">Ver ofertas</a>
+                        Ver ofertas
                     </button>
                     <button className='explorarCate' onClick={() => navigate('/categoria')}>
                         Explorar Categorias
