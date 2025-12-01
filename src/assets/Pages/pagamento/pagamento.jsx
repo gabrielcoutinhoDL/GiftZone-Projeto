@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
-import './pagamento.css';
-import Cabecalho from '../../components/cabecalho/cabecalho';
-import Rodape from '../../components/rodape/rodape';
+import React from 'react'
+import './pagamento.css'
+import Cabecalho from '../../components/cabecalho/cabecalho'
+import Rodape from '../../components/rodape/rodape'
+import { useLocation } from 'react-router-dom'
 
-const Pagamento = () => {
-  const [metodo, setMetodo] = useState("");
-  const [finalizado, setFinalizado] = useState(false);
 
+const pagamento = () => {
+    
+
+    const location = useLocation();
+    const { produto, valorSelecionado } = location.state || {};
 
   return (
     <>
@@ -113,45 +116,27 @@ const Pagamento = () => {
               )}
 
 
-            </div>
-          </div>
+                <div class="item">
+                    
+                    <img src={produto.imagemUrl}/>
 
-          <div className='resumo'>
-            <h3>Resumo do Pedido</h3>
-
-            <div className='item'>
-              <img src='/images/steam-card.jpg' alt='Produto' />
-              <div className='info'>
-                <h4>Steam Gift Card</h4>
-                <span className='preco'>R$ 50</span>
-                <small>Qtd: 1</small>
-              </div>
-            </div>
+                    <div class="info">
+                        <h4>{produto.nome}</h4>
+                        <span class="preco">{valorSelecionado}</span>
+                        <small>Qtd: 1</small>
+                    </div>
+                </div>
 
             <hr />
 
-            <div className='linha'>
-              <span>Subtotal</span>
-              <span>R$ 50.00</span>
-            </div>
+                <div class="linha">
+                    <span>Subtotal</span>
+                    <span>{valorSelecionado}</span>
+                </div>
 
-            <div className='linha total'>
-              <span>Total</span>
-              <span className='valor-total'>R$ 50.00</span>
-            </div>
-
-            <button
-                className='finalizar'
-                onClick={() => setFinalizado(true)}
-                >
-                <span className='icon'>✔</span>
-                Finalizar Compra
-            </button>
-
-            {finalizado && (
-                <div className="compra-sucesso">
-                    <strong>Compra efetuada com sucesso!</strong>
-                    <small>O código ou boleto está disponível abaixo.</small>
+                <div class="linha total">
+                    <span>Total</span>
+                    <span class="valor-total">{valorSelecionado}</span>
                 </div>
             )}
 
