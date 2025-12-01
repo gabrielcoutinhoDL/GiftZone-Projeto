@@ -6,19 +6,19 @@ import { Link } from "react-router-dom";
 import Rodape from "../../components/rodape/rodape"
 import { useState } from "react";
 
-//cria função
 function Categoria() {
-  const [categoriaSelecionada, setCategoriaSelecionada] = useState('Todos');
+  const [categoriaSelecionada, setCategoriaSelecionada] = useState('Todos'); 
+   //Deixa como padrão a aba 'todos'
   
-  const categorias = [
+  const categorias = [ 
     { id: 'Todos', nome: 'Todos' },
     { id: 'Games', nome: 'Games' },
     { id: 'Streaming', nome: 'Streaming' },
     { id: 'Apps', nome: 'Apps' },
     { id: 'Música', nome: 'Música' }
-  ];
+  ]; 
 
-  // Mapeamento de produtos para categorias (baseado no tipo de produto)
+// Mapeamento de produtos para categorias 
   const produtoCategorias = {
     steam: 'Games',
     xbox: 'Games',
@@ -26,7 +26,7 @@ function Categoria() {
     nuvem: 'Apps'
   };
 
-  const productIds = Object.keys(PRODUTOS);
+  const productIds = Object.keys(PRODUTOS); //extrai todos os id's dentro de PRODUTOS
   
   // Filtrar produtos baseado na categoria selecionada
   const produtosFiltrados = categoriaSelecionada === 'Todos' 
@@ -91,24 +91,29 @@ function Categoria() {
         <section>
           <div className="categoria-botoes">
             {categorias.map((categoria) => (
+
               <button
                 key={categoria.id}
-                className={`categoria-botao ${categoriaSelecionada === categoria.id ? 'ativo' : ''}`}
+                className={`categoria-botao ${categoriaSelecionada === categoria.id ? 'ativo' : ''}`} //Estude o uso das classes dinamicas (para usar no Portifólio)
                 onClick={() => setCategoriaSelecionada(categoria.id)}
               >
                 {categoria.nome}
               </button>
+
             ))}
           </div>
-          {produtosFiltrados.length > 0 ? (
+
+          
+          {produtosFiltrados.length > 0 ? ( //renderização condicional
             <div className="cards-grid">
               {produtosFiltrados.map((id) => (
                 <Link
                   key={id}
-                  to={`/produto/${id}`}
+                  to={`/produto/${id}`} //link navegavel - cria o link para cada produto
                   className="card-produto-link"
                 >
                   <article className="card-produto">
+                  
                     <div
                       className="card-produto-imagem"
                       style={{
@@ -117,6 +122,7 @@ function Categoria() {
                         backgroundPosition: "center",
                       }}
                     ></div>
+
                     <div className="card-produto-info">
                       <h3 className="card-produto-titulo">{PRODUTOS[id].nome}</h3>
                       <p className="card-produto-avaliacao">
